@@ -1,0 +1,109 @@
+.detailsContainer {
+  padding: 20px;
+  width: 650px;
+  margin: 80px auto;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+}
+@media (max-width: 767px) {
+  .detailsContainer {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+
+  }
+}
+.detailsContainer img {
+  display: block;
+  width: 180px;
+  height: 200px;
+  padding-right: 20px;
+  margin: 0 auto;
+  border-radius: 10px;
+  object-fit: contain;
+  transition: transform 0.3s ease-in-out;
+}
+
+.detailsContainer img:hover {
+  transform: scale(1.05);
+}
+
+.detailsInfo {
+  text-align: center;
+  padding: 10px;
+}
+
+.detailsInfo h3 {
+  font-size: 1.5rem;
+  text-wrap: wrap;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.detailsInfo p {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 10px;
+  line-height: 22px;
+  word-wrap: break-word;
+}
+
+.detailsInfo .category {
+  font-style: italic;
+  color: #777777a2;
+}
+
+.detailsActions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 400px;
+  margin-top: 20px;
+}
+
+.priceTag {
+  display: flex;
+  align-items: center;
+  font-size: 20px;
+  font-weight: bold;
+  color: #333;
+}
+
+.priceTag svg {
+  margin-right: 4px;
+}
+
+.backButton {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  background: #007bff;
+  color: white;
+  padding: 8px 12px;
+  border-radius: 8px;
+  transition: background 0.3s ease-in-out;
+}
+
+.backButton:hover {
+  background: #0056b3;
+}
+
+.backButton svg {
+  margin-right: 5px;
+}
+
+@media screen and (min-width: 768px) {
+  .detailsContainer {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+
+  .detailsInfo {
+    text-align: left;
+    max-width: 500px;
+  }
+}

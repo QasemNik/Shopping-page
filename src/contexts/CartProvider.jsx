@@ -1,7 +1,8 @@
 // src/context/CartContext.js
-import React, {  useReducer } from 'react';
+import React, { useEffect, useReducer } from 'react';
 import { sumProducts } from '../helpers/helper';
 import CartContext from './CartContext';
+import useLocalStorage from '../hooks/UseLocalStorage';
 
 const initialState = {
     selectedItems: [],
@@ -65,8 +66,14 @@ const reducer = (state, action) => {
 
 
 const CartProvider = ({ children }) => {
-    const [state, dispatch] = useReducer(reducer, initialState);
+    const [store, setStore] = useLocalStorage('cart', initialState);
 
+    const [state, dispatch] = useReducer(reducer, store || initialState);
+
+    useEffect(() => {
+        setStore(state)
+    }, [state, setStore])
+    
     return (
         <CartContext.Provider value={{ state, dispatch }}>
             {children}

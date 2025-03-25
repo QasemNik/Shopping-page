@@ -1,0 +1,42 @@
+header {
+  min-width: 250px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 30px;
+  margin: 0 auto;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+}
+
+header a {
+  text-decoration: none;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #333;
+}
+
+header div {
+  font-size: 1.6rem;
+  color: #333;
+  text-align: center;
+  height: 35px;
+  width: 35px;
+  border-radius: 9px;
+  padding: 2px;
+  position: relative;
+}
+header div span {
+  font-size: 0.9rem;
+  width: 20px;
+  line-height: 20px;
+  background-color: #007bff1a;
+  color: #333;
+  border-radius: 50%;
+  position: absolute;
+  top: -10px;
+  right: -10px;
+}
+

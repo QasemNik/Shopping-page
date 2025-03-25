@@ -1,0 +1,64 @@
+.basketCard {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #fff;
+    padding: 12px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 10px;
+}
+
+.productImage {
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+    border-radius: 8px;
+}
+
+.productTitle {
+    flex: 1;
+    margin: 0 10px;
+    font-size: 14px;
+    font-weight: bold;
+    color: #333;
+}
+
+.actions {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.actionButton {
+    background: #007bff;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.actionButton:hover {
+    background: #0056b3;
+}
+
+.deleteButton {
+    background: transparent;
+    color: red;
+    font-size: 20px;
+    cursor: pointer;
+    border: none;
+    transition: color 0.3s ease;
+}
+
+.deleteButton:hover {
+    color: darkred;
+}
+
+.quantity {
+    font-size: 16px;
+    font-weight: bold;
+}

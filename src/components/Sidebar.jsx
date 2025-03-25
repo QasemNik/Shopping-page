@@ -1,10 +1,12 @@
 import React from 'react'
 import { createQueryObj } from '../helpers/helper'
 import { FaListUl } from 'react-icons/fa'
-import './sidebar.css'
 import categories from '../constants/list'
-export default function Sidebar({ setQuery, query }) {
 
+import './sidebar.css'
+
+
+export default function Sidebar({ setQuery, query }) {
 
     const currentCategory = query.category || 'all'
 

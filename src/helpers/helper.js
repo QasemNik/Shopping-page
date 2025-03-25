@@ -1,11 +1,10 @@
+/* eslint-disable no-unused-vars */
 const shortenText = (text)=>{
 return text.split(' ').slice(0,3).join("")
-}
+} 
 
 function searchProducts (products,search){
-    if(!search){
-        return products
-    }
+    if(!search) return products
     const productSearched = products.filter((pro)=>pro.title.toLowerCase().includes(search))
  
     return productSearched
@@ -50,5 +49,13 @@ const sumProducts = (products) => {
 
     return {itemsCounter, total}
 }
-
-export { sumProducts, shortenText,searchProducts,filterProducts ,createQueryObj,getInitQuery}
+const productQuantity = (state,id) => {
+const index = state.selectedItems.findIndex(i =>i.id ===id)
+    if (index !== -1) { 
+        return state.selectedItems[index].quantity
+    } else {
+        return 0
+    }
+    
+}
+export { sumProducts,productQuantity, shortenText,searchProducts,filterProducts ,createQueryObj,getInitQuery}
